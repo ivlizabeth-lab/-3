@@ -1,27 +1,55 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <title>Вхід</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CS | Вхід</title>
+  <link rel="stylesheet" href="login.css" />
 </head>
 <body>
 
-<div class="card">
-    <h1>Вхід 🔐</h1>
-    <p>Введи свої дані</p>
+<header class="header">
+  <div class="container header__inner">
+    <div class="logo">CS FAN</div>
 
-    <div class="inputs">
-        <input type="text" placeholder="Логін">
-        <input type="password" placeholder="Пароль">
-    </div>
+    <nav class="nav">
+      <a href="index.html">ГОЛОВНА</a>
+    </nav>
 
-    <div class="buttons">
-        <a href="home.html" class="btn main">Увійти</a>
-        <a href="index.html" class="btn">Назад</a>
-    </div>
+    <a class="btn-ghost" href="login.html">РЕЄСТРАЦІЯ</a>
+  </div>
+</header>
+
+<!-- Toast помилка -->
+<div class="toast" id="toast">
+  <div class="toast__icon">!</div>
+  <div class="toast__text">
+    <div class="toast__title">ПОМИЛКА ВХОДУ</div>
+    <div class="toast__msg" id="toastMsg"></div>
+  </div>
+  <button class="toast__close" type="button" id="toastClose">×</button>
 </div>
 
+<main class="page">
+  <section class="card">
+    <h1 class="card__title">АВТОРИЗАЦІЯ</h1>
+    <p class="card__subtitle">Введи логін і пароль, щоб зайти.</p>
 
+    <form id="loginForm" class="form">
+      <label class="form__label" for="login">ЛОГІН</label>
+      <input class="form__input" id="login" type="text" placeholder="Напр: адмін" />
+
+      <label class="form__label" for="password">ПАРОЛЬ</label>
+      <input class="form__input" id="password" type="password" placeholder="Будь-який (поки що)" />
+
+      <button class="btn-red" type="submit">УВІЙТИ</button>
+    </form>
+
+    <a class="back" href="index.html">← Назад на головну</a>
+  </section>
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
+

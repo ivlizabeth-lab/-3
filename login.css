@@ -1,0 +1,145 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body{
+  font-family: Arial, sans-serif;
+  color: white;
+  min-height: 100vh;
+
+  /* ✅ ВАРІАНТ 2: помаранчеве світіння по центру (статично) */
+  background: radial-gradient(
+    circle at center,
+    #ff8c00 0%,
+    #cc5500 30%,
+    #1a0f00 70%,
+    #000000 100%
+  );
+}
+
+/* header */
+.container{ width: 90%; max-width: 1100px; margin: auto; }
+.header{ background: rgba(0,0,0,0.6); padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.header__inner{ display:flex; justify-content:space-between; align-items:center; gap: 16px; }
+.logo{ font-weight: 900; letter-spacing: 2px; font-size: 22px; }
+.nav a{ margin: 0 14px; text-decoration:none; color:white; font-weight:800; font-size:14px; opacity:0.9; }
+.nav a:hover{ opacity:1; }
+
+.btn-ghost{
+  padding: 8px 15px;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+}
+.btn-ghost:hover{ background: rgba(255,255,255,0.08); }
+
+/* center page */
+.page{
+  min-height: calc(100vh - 78px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 40px 0;
+}
+
+/* card */
+.card{
+  width: min(720px, 92%);
+  padding: 42px;
+  border-radius: 22px;
+  background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
+}
+
+.card__title{ font-size: 44px; letter-spacing: 2px; margin-bottom: 10px; }
+.card__subtitle{ color: rgba(255,255,255,0.8); margin-bottom: 18px; font-size: 18px; }
+
+.form{ display:flex; flex-direction:column; gap: 10px; }
+.form__label{ margin-top: 16px; font-size: 14px; font-weight: 800; letter-spacing: 1px; opacity: 0.9; }
+
+.form__input{
+  width:100%;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  color:white;
+  outline:none;
+  font-size:16px;
+}
+.form__input::placeholder{ color: rgba(255,255,255,0.45); }
+.form__input:focus{ border-color: rgba(255,255,255,0.28); }
+
+.btn-red{
+  margin-top: 22px;
+  width:100%;
+  padding: 16px;
+  border:none;
+  border-radius: 16px;
+  cursor:pointer;
+  background: linear-gradient(180deg, #ff7a00 0%, #b34700 100%);
+  color:white;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+.btn-red:hover{ filter: brightness(1.08); }
+
+.back{
+  display:inline-block;
+  margin-top: 18px;
+  color: rgba(255,255,255,0.85);
+  text-decoration:none;
+}
+.back:hover{ text-decoration: underline; }
+
+/* toast */
+.toast{
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(980px, 92%);
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.82);
+  border: 2px solid #ff7a00;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.45);
+  display:none;
+  align-items:center;
+  gap: 14px;
+  z-index: 9999;
+}
+.toast.show{ display:flex; }
+
+.toast__icon{
+  width:48px; height:48px;
+  border-radius: 16px;
+  background: #ff7a00;
+  display:flex; align-items:center; justify-content:center;
+  font-weight:900; font-size: 28px;
+  color:#fff;
+}
+
+.toast__text{ display:flex; flex-direction:column; gap: 4px; }
+.toast__title{ font-weight: 900; letter-spacing: 1px; }
+.toast__msg{ color: rgba(255,255,255,0.85); font-size: 14px; }
+
+.toast__close{
+  margin-left:auto;
+  width:46px; height:46px;
+  border-radius: 16px;
+  border:none;
+  cursor:pointer;
+  font-size: 24px;
+  background: rgba(255,255,255,0.08);
+  color:white;
+}
+.toast__close:hover{ background: rgba(255,255,255,0.16); }
+
+@media (max-width: 650px){
+  .nav{ display:none; }
+  .card__title{ font-size: 34px; }
+}

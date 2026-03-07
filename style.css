@@ -1,97 +1,155 @@
-/* Загальні стилі */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: white;
 
-    background: linear-gradient(
-        270deg,
-        #ff0080,
-        #7928ca,
-        #2afadf
-    );
-    background-size: 600% 600%;
-    animation: gradientMove 10s ease infinite;
+  background: linear-gradient(
+    135deg,
+    #0f0f0f 0%,
+    #1a0f00 25%,
+    #ff6a00 50%,
+    #1a0f00 75%,
+    #0f0f0f 100%
+  );
 }
 
-/* Анімація фону */
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  
 }
 
-/* Картка */
-.card {
-    background: rgba(255, 255, 255, 0.15);
-    padding: 40px;
-    border-radius: 20px;
-    text-align: center;
-    color: white;
-    width: 350px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+@keyframes moveBg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* Заголовок */
-.card h1 {
-    margin-bottom: 15px;
+  /* Фіолетово-блакитний перелив */
+  
 }
 
-/* Текст */
-.card p {
-    margin-bottom: 30px;
-    opacity: 0.9;
+
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+
+    color: #333;
 }
 
-/* Кнопка */
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
-    background: white;
-    color: #7928ca;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 30px;
-    transition: 0.3s;
+/* Контейнер */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
 }
 
-/* Ефект наведення */
-.btn:hover {
-    background: #ff0080;
-    color: white;
-    transform: scale(1.1);
-}
-.inputs {
-    margin-bottom: 25px; /* ❗ Відступ між полями і кнопкою */
+/* HEADER */
+.header {
+  background: rgba(0,0,0,0.6);
+  padding: 20px 0;
 }
 
-input {
-    width: 100%;
-    padding: 14px 0;          /* ⬅ симетрія */
-    margin-bottom: 14px;
-    border-radius: 12px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    text-align: center;
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Центруємо саме placeholder */
-input::placeholder {
-    text-align: center;
-    color: #888;
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: 2px;
 }
+
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.nav a:hover {
+  color: #ffffff;
+}
+
+/* HERO */
+.hero {
+  padding: 120px 0;
+}
+
+.hero h1 {
+  font-size: 90px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: rgba(255,255,255,0.8);
+}
+
+.info-box {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.3);
+  margin-bottom: 25px;
+}
+
+/* КНОПКИ */
 .buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
+  display: flex;
+  gap: 15px;
 }
 
-.btn.main {
-    background: #ffffff;
-    color: #7b2cff;
+.btn {
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
 }
+
+.btn-red {
+  background: #b79fd3;
+  color: white;
+}
+
+.btn-red:hover {
+  background: #a688cc;
+}
+
+.btn-dark {
+  background: rgba(255,255,255,0.15);
+  color: white;
+}
+
+.btn-dark:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.btn-ghost {
+  padding: 8px 15px;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Анімація переливання */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
